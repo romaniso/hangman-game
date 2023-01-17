@@ -1,18 +1,18 @@
 export default [
   {
-    term: "Ford",
+    term: "a Ford",
     hint: "car",
   },
   {
-    term: "BMW",
+    term: "a BMW",
     hint: "car",
   },
   {
-    term: "Iphone",
+    term: "an Iphone",
     hint: "phone",
   },
   {
-    term: "Michigan",
+    term: "the Michigan",
     hint: "lake",
   },
 ];

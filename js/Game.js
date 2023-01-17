@@ -1,3 +1,5 @@
+import { Term } from "./Term.js";
+
 export class Game {
   alphabet = [
     "A",
@@ -34,7 +36,10 @@ export class Game {
     this.lettersBox = lettersBox;
     const { hint, term } =
       this.data[Math.floor(Math.random.apply() * this.data.length)];
+    this.scriptedTerm = new Term(term);
     this.drawButtons();
+    this.drawHint(hint);
+    this.drawTerm(this.scriptedTerm.scriptedTerm);
   }
   choseLetter(letter) {
     console.log(letter);
@@ -46,5 +51,11 @@ export class Game {
       btn.addEventListener("click", () => this.choseLetter(letter));
       this.lettersBox.appendChild(btn);
     });
+  }
+  drawHint(hint) {
+    this.hintBox.textContent = hint;
+  }
+  drawTerm(scriptedTerm) {
+    this.wordBox.textContent = scriptedTerm;
   }
 }
