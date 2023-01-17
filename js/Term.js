@@ -1,15 +1,28 @@
 export class Term {
   constructor(term) {
-    this.term = term;
+    this.term = term.toLowerCase();
     this.scriptedTerm = "";
+    this.guessedLetters = "";
     this.enscriptTerm(this.term);
-    console.log(this.scriptedTerm);
   }
   enscriptTerm(term) {
+    let scriptedTerm = "";
     for (let letter of this.term) {
-      letter.toLowerCase();
-      if (letter === " ") this.scriptedTerm += letter;
-      else this.scriptedTerm += "_";
+      if (letter === " " || this.guessedLetters.includes(letter))
+        scriptedTerm += letter;
+      else scriptedTerm += "_";
+    }
+    console.log(this.scriptedTerm);
+    this.scriptedTerm = scriptedTerm;
+  }
+  isLetterInTerm(letter) {
+    if (this.term.includes(letter.toLowerCase())) {
+      this.guessedLetters += letter.toLowerCase();
+      console.log(this.guessedLetters);
+      this.enscriptTerm(this.term);
+      return true;
+    } else {
+      return false;
     }
   }
 }

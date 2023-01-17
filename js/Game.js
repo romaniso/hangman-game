@@ -36,26 +36,29 @@ export class Game {
     this.lettersBox = lettersBox;
     const { hint, term } =
       this.data[Math.floor(Math.random.apply() * this.data.length)];
-    this.scriptedTerm = new Term(term);
-    this.drawButtons();
+    this.term = term;
+    this.script = new Term(term);
+    this.drawButtons(term);
     this.drawHint(hint);
-    this.drawTerm(this.scriptedTerm.scriptedTerm);
+    this.drawTerm(this.script.scriptedTerm);
   }
-  choseLetter(letter) {
-    console.log(letter);
+  choseLetter(letter, e) {
+    e.target.disabled = true;
+    this.script.isLetterInTerm(letter);
+    this.drawTerm(this.script.scriptedTerm);
   }
   drawButtons() {
     this.alphabet.forEach((letter) => {
       const btn = document.createElement("button");
       btn.innerHTML = letter;
-      btn.addEventListener("click", () => this.choseLetter(letter));
+      btn.addEventListener("click", (e) => this.choseLetter(letter, e));
       this.lettersBox.appendChild(btn);
     });
   }
   drawHint(hint) {
     this.hintBox.textContent = hint;
   }
-  drawTerm(scriptedTerm) {
-    this.wordBox.textContent = scriptedTerm;
+  drawTerm() {
+    this.wordBox.textContent = this.script.scriptedTerm;
   }
 }
