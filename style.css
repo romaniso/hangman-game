@@ -20,7 +20,7 @@ button {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 36px;
 }
 
 .game-pannel {
@@ -34,7 +34,7 @@ h1 {
   position: relative;
   max-width: 400px;
   flex: 50%;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .image-box > div {
@@ -46,15 +46,15 @@ h1 {
 
 .level-1 {
   width: 55%;
-  height: 10%;
-  bottom: 9%;
+  height: 10.5%;
+  bottom: 8%;
   left: 3%;
   opacity: 0.95;
 }
 .level-2 {
   width: 15%;
-  height: 61%;
-  bottom: 19%;
+  height: 62%;
+  bottom: 18%;
   left: 26%;
   opacity: 0.95;
 }

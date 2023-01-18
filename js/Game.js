@@ -50,6 +50,10 @@ export class Game {
     if (this.script.isLetterInTerm(letter)) {
       this.drawTerm(this.script.scriptedTerm);
       if (!this.script.scriptedTerm.includes("_")) {
+        this.hangman.showPlayerState(true);
+        this.hangman.hangmanImg.src = "/assets/happyhangman.png";
+        this.wordBox.className =
+          "animate__animated animate__shakeX animate__infinite animate__slow";
         setTimeout(() => {
           alert("You won");
         }, 500);
