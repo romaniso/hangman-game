@@ -12,7 +12,6 @@ export class Term {
         scriptedTerm += letter;
       else scriptedTerm += "_";
     }
-    console.log(this.scriptedTerm);
     this.scriptedTerm = scriptedTerm;
   }
   isLetterInTerm(letter) {

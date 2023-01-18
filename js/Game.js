@@ -1,3 +1,4 @@
+import { Hangman } from "./Hangman.js";
 import { Term } from "./Term.js";
 
 export class Game {
@@ -38,14 +39,25 @@ export class Game {
       this.data[Math.floor(Math.random.apply() * this.data.length)];
     this.term = term;
     this.script = new Term(term);
+    this.hangman = new Hangman(".level");
     this.drawButtons(term);
     this.drawHint(hint);
     this.drawTerm(this.script.scriptedTerm);
   }
   choseLetter(letter, e) {
     e.target.disabled = true;
-    this.script.isLetterInTerm(letter);
-    this.drawTerm(this.script.scriptedTerm);
+
+    if (this.script.isLetterInTerm(letter)) {
+      this.drawTerm(this.script.scriptedTerm);
+      if (!this.script.scriptedTerm.includes("_")) {
+        setTimeout(() => {
+          alert("You won");
+        }, 500);
+      }
+    } else {
+      this.hangman.increaseState();
+      this.hangman.showPlayerState();
+    }
   }
   drawButtons() {
     this.alphabet.forEach((letter) => {

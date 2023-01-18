@@ -1,18 +1,18 @@
 export default [
   {
-    term: "a Ford",
-    hint: "car",
+    term: "Everest",
+    hint: "The highest mountain",
   },
   {
-    term: "a BMW",
-    hint: "car",
+    term: "The Vatican",
+    hint: "The smallest country",
   },
   {
-    term: "an Iphone",
-    hint: "phone",
+    term: "Washington DC",
+    hint: "The capital of the USA",
   },
   {
-    term: "the Michigan",
-    hint: "lake",
+    term: "Michigan",
+    hint: "the biggest lake in the USA",
   },
 ];
