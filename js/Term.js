@@ -17,7 +17,6 @@ export class Term {
   isLetterInTerm(letter) {
     if (this.term.includes(letter.toLowerCase())) {
       this.guessedLetters += letter.toLowerCase();
-      console.log(this.guessedLetters);
       this.enscriptTerm(this.term);
       return true;
     } else {

@@ -30,19 +30,25 @@ export class Game {
     "Y",
     "Z",
   ];
-  constructor({ wordBox, hintBox, lettersBox, data }) {
+  constructor({ wordBox, hintBox, lettersBox, nextButton, data }) {
     this.data = data;
     this.wordBox = wordBox;
     this.hintBox = hintBox;
     this.lettersBox = lettersBox;
-    const { hint, term } =
-      this.data[Math.floor(Math.random.apply() * this.data.length)];
+    this.nextButton = nextButton;
+    //Randomly
+    // const { hint, term } =
+    //   this.data[Math.floor(Math.random.apply() * this.data.length)];
+    //By order
+    this.dataIndex = 0;
+    const { hint, term } = this.data[this.dataIndex];
     this.term = term;
     this.script = new Term(term);
     this.hangman = new Levels(".level");
     this.drawButtons(term);
     this.drawHint(hint);
     this.drawTerm(this.script.scriptedTerm);
+    this.nextButton.addEventListener("click", this.nextQuestion.bind(this));
   }
   choseLetter(letter, e) {
     e.target.disabled = true;
@@ -55,6 +61,7 @@ export class Game {
         this.wordBox.className =
           "animate__animated animate__shakeX animate__infinite animate__slow";
         setTimeout(() => {
+          //!!  I want to use resetGame method but problem is that I cannot reach game object from choseletter cause this here is button
           alert("You won");
         }, 500);
       }
@@ -64,6 +71,7 @@ export class Game {
     }
   }
   drawButtons() {
+    this.lettersBox.innerHTML = "";
     this.alphabet.forEach((letter) => {
       const btn = document.createElement("button");
       btn.innerHTML = letter;
@@ -76,5 +84,22 @@ export class Game {
   }
   drawTerm() {
     this.wordBox.textContent = this.script.scriptedTerm;
+  }
+  nextQuestion() {
+    if (this.dataIndex >= this.data.length - 1) {
+      this.dataIndex = 0;
+      this.resetGame(this.script.scriptedTerm, this.dataIndex);
+    } else {
+      this.dataIndex++;
+      this.resetGame(this.script.scriptedTerm, this.dataIndex);
+    }
+  }
+  resetGame(scriptedTerm, index) {
+    const { hint, term } = this.data[index];
+    this.drawButtons(term);
+    this.drawHint(hint);
+    this.script = new Term(term);
+    this.drawTerm(scriptedTerm);
+    this.hangman.resetHangman();
   }
 }
