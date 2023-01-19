@@ -9,6 +9,7 @@ body {
   max-width: 1000px;
   margin: 30px auto;
   text-align: center;
+  padding: 0 15px;
 }
 
 h1,
@@ -28,6 +29,13 @@ h1 {
   justify-content: space-between;
   align-items: center;
   column-gap: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+  .game-pannel {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
 
 .image-box {
@@ -80,38 +88,38 @@ h1 {
   opacity: 0.95;
 }
 .level-6 {
-  width: 8%;
-  height: 21%;
-  bottom: 28%;
-  left: 69%;
+  width: 6.5%;
+  height: 20%;
+  bottom: 30%;
+  left: 70%;
   opacity: 0.95;
 }
 .level-7 {
-  width: 8%;
+  width: 9%;
   height: 18%;
   bottom: 28%;
   left: 61%;
   opacity: 0.95;
 }
 .level-8 {
-  width: 9%;
+  width: 10%;
   height: 18%;
   bottom: 29%;
-  left: 77%;
+  left: 76%;
   opacity: 0.95;
 }
 .level-9 {
-  width: 9%;
+  width: 10%;
   height: 13%;
-  bottom: 16%;
+  bottom: 17%;
   left: 63%;
   opacity: 0.95;
 }
 .level-10 {
   width: 9%;
   height: 15%;
-  bottom: 15%;
-  left: 75%;
+  bottom: 16%;
+  left: 74%;
   opacity: 0.95;
 }
 

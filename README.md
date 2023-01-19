@@ -9,3 +9,4 @@ it is a simple web game built according to object-oriented programming. It featu
 - [ ] refactor the code
 - [ ] make it responsive
 - [ ] disable sellection when game is over
+- [ ] keyup listeners

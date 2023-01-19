@@ -1,4 +1,4 @@
-export class Hangman {
+export class Levels {
   constructor(elName) {
     this.currentState = 0;
     this.stateNumber = 10;

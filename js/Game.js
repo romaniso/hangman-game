@@ -1,4 +1,4 @@
-import { Hangman } from "./Hangman.js";
+import { Levels } from "./Levels.js";
 import { Term } from "./Term.js";
 
 export class Game {
@@ -39,7 +39,7 @@ export class Game {
       this.data[Math.floor(Math.random.apply() * this.data.length)];
     this.term = term;
     this.script = new Term(term);
-    this.hangman = new Hangman(".level");
+    this.hangman = new Levels(".level");
     this.drawButtons(term);
     this.drawHint(hint);
     this.drawTerm(this.script.scriptedTerm);
