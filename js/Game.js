@@ -101,5 +101,6 @@ export class Game {
     this.script = new Term(term);
     this.drawTerm(scriptedTerm);
     this.hangman.resetHangman();
+    this.wordBox.className = "";
   }
 }

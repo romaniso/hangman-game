@@ -32,5 +32,6 @@ export class Levels {
     document.querySelectorAll("div[data-level]").forEach((level) => {
       level.style.opacity = "1";
     });
+    this.hangmanImg.src = "/assets/hangman.png";
   }
 }
