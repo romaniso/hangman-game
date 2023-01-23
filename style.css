@@ -163,6 +163,10 @@ img {
   border-radius: 5px;
   transition: transform 0.2s ease-out 0s;
 }
+#letters-box {
+  margin: 0 auto;
+  max-width: 350px;
+}
 #letters-box button:hover {
   transform: scale(1.1);
 }
