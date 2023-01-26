@@ -1,30 +1,46 @@
 export default [
   {
-    term: "commute",
-    hint: "to get from home to your workplace",
+    term: "round",
+    hint: "to change the price to the closest number",
   },
   {
-    term: "self-sufficient,",
-    hint: "able to provide everything you need, especially food, for yourself without the help of other people",
+    term: "increase",
+    hint: "to make something bigger or greater",
   },
   {
     term: "get rid of,",
     hint: "to remove something that you do not want any longer",
   },
   {
-    term: "dull,",
-    hint: "boring",
+    term: "blame",
+    hint: "to say or think that someone or something did something wrong or is responsible for something bad happening",
   },
   {
-    term: "frame,",
-    hint: "it is taken by a photo camera",
+    term: "cope",
+    hint: "to deal successfully with a difficult situation",
   },
   {
-    term: "blanket,",
-    hint: "your cover yourself with it while sleeping",
+    term: "threaten",
+    hint: "to tell someone that you will kill or hurt them or cause problems if they do not do what you want",
   },
   {
-    term: "speechless,",
-    hint: "unable to utter any word",
+    term: "anxious",
+    hint: "worried and nervous",
+  },
+  {
+    term: "go wild",
+    hint: "to increase extremely",
+  },
+  {
+    term: "hike",
+    hint: "to grow",
+  },
+  {
+    term: "unjustifiably",
+    hint: "in a way that can’t be accepted",
+  },
+  {
+    term: "fine",
+    hint: "mandat / kara",
   },
 ];
