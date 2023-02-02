@@ -1,27 +1,27 @@
 export default [
   {
+    term: "homeless",
+    hint: "without a home",
+  },
+  {
+    term: "insurance",
+    hint: "an agreement in which you pay a company money and they pay your costs if you have an accident, injury, etc.",
+  },
+  {
     term: "round",
-    hint: "to change the price to the closest number",
+    hint: "(of a number) to male not exact but approximate, and ending in zero",
   },
   {
-    term: "increase",
-    hint: "to make something bigger or greater",
-  },
-  {
-    term: "get rid of,",
-    hint: "to remove something that you do not want any longer",
-  },
-  {
-    term: "blame",
-    hint: "to say or think that someone or something did something wrong or is responsible for something bad happening",
+    term: "spike",
+    hint: "to rise to a higher amount, price, or level, usually before going down again",
   },
   {
     term: "cope",
     hint: "to deal successfully with a difficult situation",
   },
   {
-    term: "threaten",
-    hint: "to tell someone that you will kill or hurt them or cause problems if they do not do what you want",
+    term: "hand out",
+    hint: "to give something to each person in a group or place",
   },
   {
     term: "anxious",
@@ -41,6 +41,6 @@ export default [
   },
   {
     term: "fine",
-    hint: "mandat / kara",
+    hint: "a thing you get by a police officer",
   },
 ];
